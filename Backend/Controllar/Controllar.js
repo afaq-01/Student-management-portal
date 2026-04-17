@@ -1,4 +1,3 @@
-
 import jwt from 'jsonwebtoken';
 import User_models from '../Models/Model.js';
 import { v2 as cloudinary } from 'cloudinary';
@@ -11,7 +10,7 @@ const creating_token = (id) => {
 }
 
 export const Adding_user = async (req, res) => {
-  
+
     try {
 
         let { name, email, rollId, semesters, fee } = req.body;
@@ -57,7 +56,7 @@ export const Adding_user = async (req, res) => {
             rollId,
             photo: photo_Url,
             fee: feee,
-            semesters:ses
+            semesters: ses
         });
 
         await student.save();
